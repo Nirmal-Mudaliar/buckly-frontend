@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+
+  .left-bar-container {
+    width: 40px;
+    background: black;
+  }
+
+  .right-bar-container {
+    background: yellow;
+  }
+}
