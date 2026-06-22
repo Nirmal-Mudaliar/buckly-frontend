@@ -1,7 +1,7 @@
 /**
  * ============================================================
- *  Buckly Design System — PrimeNG v20 Preset
- *  Angular 20.x  |  @primeuix/themes
+ *  Buckly Design System — PrimeNG v21 Preset
+ *  Angular 21.x  |  @primeuix/themes
  * ============================================================
  *
  *  Palette
@@ -217,7 +217,9 @@ const BucklyPreset = definePreset(Aura, {
     // warn      → Orange tint (in-progress action)
     // danger    → Red tint (abandon / delete)
     button: {
-      borderRadius: '{border.radius.full}',
+      root: {
+        borderRadius: '{border.radius.full}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -287,36 +289,36 @@ const BucklyPreset = definePreset(Aura, {
               hoverColor:        '#7F1D1D',
               activeColor:       '#7F1D1D',
             },
-            outlined: {
-              primary: {
-                hoverBackground:  '#FFF1E8',
-                color:            '#FF6B00',
-                borderColor:      '#FF6B00',
-              },
-              contrast: {
-                hoverBackground:  '#F5F5F5',
-                color:            '#111111',
-                borderColor:      '#111111',
-              },
-              secondary: {
-                hoverBackground:  '#F5F5F5',
-                color:            '#555555',
-                borderColor:      '#EBEBEB',
-              },
+          },
+          outlined: {
+            primary: {
+              hoverBackground:  '#FFF1E8',
+              color:            '#FF6B00',
+              borderColor:      '#FF6B00',
             },
-            text: {
-              primary: {
-                hoverBackground: '#FFF1E8',
-                color:           '#FF6B00',
-              },
-              contrast: {
-                hoverBackground: '#F5F5F5',
-                color:           '#111111',
-              },
-              secondary: {
-                hoverBackground: '#F5F5F5',
-                color:           '#777777',
-              },
+            contrast: {
+              hoverBackground:  '#F5F5F5',
+              color:            '#111111',
+              borderColor:      '#111111',
+            },
+            secondary: {
+              hoverBackground:  '#F5F5F5',
+              color:            '#555555',
+              borderColor:      '#EBEBEB',
+            },
+          },
+          text: {
+            primary: {
+              hoverBackground: '#FFF1E8',
+              color:           '#FF6B00',
+            },
+            contrast: {
+              hoverBackground: '#F5F5F5',
+              color:           '#111111',
+            },
+            secondary: {
+              hoverBackground: '#F5F5F5',
+              color:           '#777777',
             },
           },
         },
@@ -331,68 +333,45 @@ const BucklyPreset = definePreset(Aura, {
     //   secondary → Abandoned   (gray)
     //   danger    → Error / delete (red)
     tag: {
-      borderRadius: '{border.radius.full}',
+      root: {
+        borderRadius: '{border.radius.full}',
+      },
       colorScheme: {
         light: {
-          root: {
-            primary: {
-              background: '#111111',
-              color:      '#ffffff',
-            },
-            secondary: {
-              // Abandoned
-              background: '#F5F5F5',
-              color:      '#555555',
-            },
-            info: {
-              // Planned
-              background: '#EEF2FF',
-              color:      '#3730A3',
-            },
-            success: {
-              // Completed
-              background: '#F0FDF4',
-              color:      '#166534',
-            },
-            warn: {
-              // In Progress
-              background: '#FFF7ED',
-              color:      '#C2410C',
-            },
-            danger: {
-              background: '#FEF2F2',
-              color:      '#991B1B',
-            },
-            contrast: {
-              background: '#111111',
-              color:      '#ffffff',
-            },
-          },
+          primary:   { background: '#111111', color: '#ffffff' },
+          secondary: { background: '#F5F5F5', color: '#555555' },
+          info:      { background: '#EEF2FF', color: '#3730A3' },
+          success:   { background: '#F0FDF4', color: '#166534' },
+          warn:      { background: '#FFF7ED', color: '#C2410C' },
+          danger:    { background: '#FEF2F2', color: '#991B1B' },
+          contrast:  { background: '#111111', color: '#ffffff' },
         },
       },
     },
 
     // ══ BADGE (numeric dot on icons) ══════════════════
     badge: {
-      borderRadius: '{border.radius.full}',
+      root: {
+        borderRadius: '{border.radius.full}',
+      },
       colorScheme: {
         light: {
-          root: {
-            primary:   { background: '#FF6B00', color: '#ffffff' },
-            secondary: { background: '#F5F5F5', color: '#333333' },
-            info:      { background: '#EEF2FF', color: '#3730A3' },
-            success:   { background: '#F0FDF4', color: '#166534' },
-            warn:      { background: '#FFF7ED', color: '#C2410C' },
-            danger:    { background: '#FEF2F2', color: '#991B1B' },
-            contrast:  { background: '#111111', color: '#ffffff' },
-          },
+          primary:   { background: '#FF6B00', color: '#ffffff' },
+          secondary: { background: '#F5F5F5', color: '#333333' },
+          info:      { background: '#EEF2FF', color: '#3730A3' },
+          success:   { background: '#F0FDF4', color: '#166534' },
+          warn:      { background: '#FFF7ED', color: '#C2410C' },
+          danger:    { background: '#FEF2F2', color: '#991B1B' },
+          contrast:  { background: '#111111', color: '#ffffff' },
         },
       },
     },
 
     // ══ CARD ══════════════════════════════════════════
     card: {
-      borderRadius: '{border.radius.lg}',
+      root: {
+        borderRadius: '{border.radius.lg}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -409,16 +388,20 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ INPUTTEXT ═════════════════════════════════════
     inputtext: {
-      borderRadius: '{border.radius.md}',
-      paddingX:     '0.75rem',
-      paddingY:     '0.5625rem',
-      sm: { fontSize: '0.8125rem', paddingX: '0.625rem',  paddingY: '0.4375rem' },
-      lg: { fontSize: '1rem',      paddingX: '0.875rem',  paddingY: '0.6875rem' },
+      root: {
+        borderRadius: '{border.radius.md}',
+        paddingX:     '0.75rem',
+        paddingY:     '0.5625rem',
+        sm: { fontSize: '0.8125rem', paddingX: '0.625rem',  paddingY: '0.4375rem' },
+        lg: { fontSize: '1rem',      paddingX: '0.875rem',  paddingY: '0.6875rem' },
+      },
     },
 
     // ══ SELECT (Dropdown) ═════════════════════════════
     select: {
-      borderRadius: '{border.radius.md}',
+      root: {
+        borderRadius: '{border.radius.md}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -458,7 +441,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ MULTISELECT ═══════════════════════════════════
     multiselect: {
-      borderRadius: '{border.radius.md}',
+      root: {
+        borderRadius: '{border.radius.md}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -482,7 +467,7 @@ const BucklyPreset = definePreset(Aura, {
             color:              '#111111',
           },
           chip: {
-            borderRadius:  '{border.radius.full}',
+            borderRadius: '{border.radius.full}',
           },
         },
       },
@@ -490,15 +475,19 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ TEXTAREA ══════════════════════════════════════
     textarea: {
-      borderRadius: '{border.radius.md}',
+      root: {
+        borderRadius: '{border.radius.md}',
+      },
     },
 
     // ══ DATEPICKER (Calendar) ═════════════════════════
     datepicker: {
-      borderRadius: '{border.radius.md}',
+      panel: {
+        borderRadius: '{border.radius.md}',
+      },
       colorScheme: {
         light: {
-          root: {
+          panel: {
             background:  '#ffffff',
             borderColor: '#EBEBEB',
             color:       '#111111',
@@ -512,11 +501,9 @@ const BucklyPreset = definePreset(Aura, {
           date: {
             hoverBackground:    '#F5F5F5',
             selectedBackground: '#111111',
-            todayBackground:    '#FFF1E8',
             color:              '#111111',
             hoverColor:         '#111111',
             selectedColor:      '#ffffff',
-            todayColor:         '#FF6B00',
             borderRadius:       '6px',
           },
         },
@@ -527,10 +514,7 @@ const BucklyPreset = definePreset(Aura, {
     tabs: {
       colorScheme: {
         light: {
-          root: {
-            borderColor: '#EBEBEB',
-          },
-          nav: {
+          tablist: {
             background:  'transparent',
             borderColor: '#EBEBEB',
           },
@@ -552,9 +536,8 @@ const BucklyPreset = definePreset(Aura, {
             color:      '#111111',
           },
           activeBar: {
-            background:   '#111111',
-            height:       '2px',
-            borderRadius: '2px',
+            background: '#111111',
+            height:     '2px',
           },
         },
       },
@@ -562,7 +545,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ POPOVER / OverlayPanel ════════════════════════
     popover: {
-      borderRadius: '{border.radius.lg}',
+      root: {
+        borderRadius: '{border.radius.lg}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -577,7 +562,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ DIALOG / Modal ════════════════════════════════
     dialog: {
-      borderRadius: '{border.radius.xl}',
+      root: {
+        borderRadius: '{border.radius.xl}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -587,19 +574,13 @@ const BucklyPreset = definePreset(Aura, {
             shadow:      '0 8px 40px rgba(0,0,0,0.12)',
           },
           header: {
-            background: '#ffffff',
-            color:      '#111111',
-            padding:    '1.5rem 1.5rem 1rem',
+            padding: '1.5rem 1.5rem 1rem',
           },
           content: {
-            background: '#ffffff',
-            color:      '#111111',
-            padding:    '0 1.5rem 1rem',
+            padding: '0 1.5rem 1rem',
           },
           footer: {
-            background:  '#ffffff',
-            borderColor: '#EBEBEB',
-            padding:     '1rem 1.5rem',
+            padding: '1rem 1.5rem',
           },
         },
       },
@@ -607,7 +588,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ MENU ══════════════════════════════════════════
     menu: {
-      borderRadius: '{border.radius.md}',
+      root: {
+        borderRadius: '{border.radius.md}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -617,13 +600,11 @@ const BucklyPreset = definePreset(Aura, {
             shadow:      'none',
           },
           item: {
-            focusBackground:  '#F5F5F5',
-            activeBackground: '#111111',
-            color:            '#777777',
-            focusColor:       '#111111',
-            activeColor:      '#ffffff',
-            padding:          '0.5rem 0.75rem',
-            borderRadius:     '8px',
+            focusBackground: '#F5F5F5',
+            color:           '#777777',
+            focusColor:      '#111111',
+            padding:         '0.5rem 0.75rem',
+            borderRadius:    '8px',
           },
           separator: {
             borderColor: '#EBEBEB',
@@ -643,11 +624,9 @@ const BucklyPreset = definePreset(Aura, {
             borderRadius: '10px',
           },
           item: {
-            focusBackground:  '#F5F5F5',
-            activeBackground: '#111111',
-            color:            '#777777',
-            focusColor:       '#111111',
-            activeColor:      '#ffffff',
+            focusBackground: '#F5F5F5',
+            color:           '#777777',
+            focusColor:      '#111111',
           },
         },
       },
@@ -676,7 +655,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ CHECKBOX ══════════════════════════════════════
     checkbox: {
-      borderRadius: '{border.radius.xs}',
+      root: {
+        borderRadius: '{border.radius.xs}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -719,13 +700,14 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ CHIP ══════════════════════════════════════════
     chip: {
-      borderRadius: '{border.radius.full}',
+      root: {
+        borderRadius: '{border.radius.full}',
+      },
       colorScheme: {
         light: {
           root: {
-            background:  '#F5F5F5',
-            color:       '#555555',
-            borderColor: '#EBEBEB',
+            background: '#F5F5F5',
+            color:      '#555555',
           },
           icon:       { color: '#888888' },
           removeIcon: { color: '#888888' },
@@ -747,34 +729,34 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ TOAST ═════════════════════════════════════════
     toast: {
-      borderRadius: '{border.radius.lg}',
+      root: {
+        borderRadius: '{border.radius.lg}',
+      },
       colorScheme: {
         light: {
-          root: {
-            info: {
-              background:  '#EEF2FF',
-              borderColor: '#C7D2FE',
-              color:       '#3730A3',
-              detailColor: '#3730A3',
-            },
-            success: {
-              background:  '#F0FDF4',
-              borderColor: '#BBF7D0',
-              color:       '#166534',
-              detailColor: '#166534',
-            },
-            warn: {
-              background:  '#FFF7ED',
-              borderColor: '#FED7AA',
-              color:       '#C2410C',
-              detailColor: '#C2410C',
-            },
-            error: {
-              background:  '#FEF2F2',
-              borderColor: '#FECACA',
-              color:       '#991B1B',
-              detailColor: '#991B1B',
-            },
+          info: {
+            background:  '#EEF2FF',
+            borderColor: '#C7D2FE',
+            color:       '#3730A3',
+            detailColor: '#3730A3',
+          },
+          success: {
+            background:  '#F0FDF4',
+            borderColor: '#BBF7D0',
+            color:       '#166534',
+            detailColor: '#166534',
+          },
+          warn: {
+            background:  '#FFF7ED',
+            borderColor: '#FED7AA',
+            color:       '#C2410C',
+            detailColor: '#C2410C',
+          },
+          error: {
+            background:  '#FEF2F2',
+            borderColor: '#FECACA',
+            color:       '#991B1B',
+            detailColor: '#991B1B',
           },
         },
       },
@@ -824,14 +806,6 @@ const BucklyPreset = definePreset(Aura, {
             borderColor: '#EBEBEB',
             color:       '#555555',
           },
-          paginatorWrapper: {
-            background:  '#ffffff',
-            borderColor: '#EBEBEB',
-          },
-          emptyMessage: {
-            background: 'transparent',
-            color:      '#888888',
-          },
         },
       },
     },
@@ -841,9 +815,8 @@ const BucklyPreset = definePreset(Aura, {
       colorScheme: {
         light: {
           root: {
-            background:  '#ffffff',
-            borderColor: '#EBEBEB',
-            color:       '#555555',
+            background: '#ffffff',
+            color:      '#555555',
           },
           navButton: {
             background:         'transparent',
@@ -875,7 +848,9 @@ const BucklyPreset = definePreset(Aura, {
 
     // ══ PROGRESSBAR ═══════════════════════════════════
     progressbar: {
-      borderRadius: '{border.radius.full}',
+      root: {
+        borderRadius: '{border.radius.full}',
+      },
       colorScheme: {
         light: {
           root: {
@@ -892,8 +867,8 @@ const BucklyPreset = definePreset(Aura, {
     divider: {
       colorScheme: {
         light: {
-          horizontal: { borderColor: '#EBEBEB', margin: '1rem 0' },
-          vertical:   { borderColor: '#EBEBEB', margin: '0 1rem' },
+          horizontal: { margin: '1rem 0' },
+          vertical:   { margin: '0 1rem' },
           content:    { background: '#ffffff', color: '#888888' },
         },
       },
@@ -904,8 +879,7 @@ const BucklyPreset = definePreset(Aura, {
       colorScheme: {
         light: {
           panel: {
-            borderColor:  '#EBEBEB',
-            borderRadius: '10px',
+            borderColor: '#EBEBEB',
           },
           header: {
             background:       '#ffffff',
@@ -931,20 +905,19 @@ const BucklyPreset = definePreset(Aura, {
       colorScheme: {
         light: {
           separator: {
-            background:       '#EBEBEB',
-            activeBackground: '#111111',
+            background: '#EBEBEB',
           },
-          item: {
+          itemLabel: {
             color:       '#888888',
             activeColor: '#111111',
-            number: {
-              background:         '#ffffff',
-              borderColor:        '#EBEBEB',
-              color:              '#888888',
-              activeBackground:   '#111111',
-              activeBorderColor:  '#111111',
-              activeColor:        '#ffffff',
-            },
+          },
+          itemNumber: {
+            background:        '#ffffff',
+            borderColor:       '#EBEBEB',
+            color:             '#888888',
+            activeBackground:  '#111111',
+            activeBorderColor: '#111111',
+            activeColor:       '#ffffff',
           },
         },
       },
@@ -955,14 +928,12 @@ const BucklyPreset = definePreset(Aura, {
       colorScheme: {
         light: {
           root: {
-            background:  'transparent',
-            borderColor: 'transparent',
-            padding:     '0',
+            background: 'transparent',
+            padding:    '0',
           },
           item: {
-            color:       '#888888',
-            hoverColor:  '#111111',
-            activeColor: '#111111',
+            color:      '#888888',
+            hoverColor: '#111111',
           },
           separator: { color: '#BBBBBB' },
         },
@@ -979,13 +950,7 @@ const BucklyPreset = definePreset(Aura, {
             borderRadius: '12px',
           },
           content: {
-            hoverBackground: '#F0FDF4',
-            borderColor:     '#EBEBEB',
-            padding:         '2rem 1.25rem',
-          },
-          badge: {
-            background: '#FF6B00',
-            color:      '#ffffff',
+            padding: '2rem 1.25rem',
           },
         },
       },
