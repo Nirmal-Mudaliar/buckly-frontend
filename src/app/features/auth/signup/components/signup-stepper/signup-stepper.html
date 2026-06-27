@@ -1,0 +1,32 @@
+<p-stepper class="stepper-container" [linear]="true" [value]="initialLoadIndex()">
+  <p-step-item [value]="1">
+    <p-step>Your details</p-step>
+    <p-step-panel>
+      <ng-template #content let-activateCallback="activateCallback">
+        <div class="step-panel-content-container">
+            Name, email and password
+        </div>
+      </ng-template>
+    </p-step-panel>
+  </p-step-item>
+  <p-step-item [value]="2">
+    <p-step>Verify phone</p-step>
+    <p-step-panel>
+      <ng-template #content let-activateCallback="activateCallback">
+        <div class="step-panel-content-container">
+            6-digit OTP
+        </div>
+      </ng-template>
+    </p-step-panel>
+  </p-step-item>
+  <p-step-item [value]="3">
+    <p-step>Add first item</p-step>
+    <p-step-panel>
+      <ng-template #content let-activateCallback="activateCallback">
+        <div class="step-panel-content-container">
+            Start your bucket list
+        </div>
+      </ng-template>
+    </p-step-panel>
+  </p-step-item>
+</p-stepper>

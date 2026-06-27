@@ -1,0 +1,15 @@
+:host {
+  .p-stepper {
+    .p-stepitem {
+      .p-steppanel {
+        background: transparent;
+
+        .step-panel-content-container {
+          font-size: 11px;
+          color: var(--buckly-ink-ghost);
+          height: 40px;
+        }
+      }
+    }
+  }
+}
