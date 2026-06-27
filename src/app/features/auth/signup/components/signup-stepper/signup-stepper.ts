@@ -12,5 +12,5 @@ import { StepperModule } from 'primeng/stepper';
   styleUrl: './signup-stepper.scss',
 })
 export class SignupStepper {
-  initialLoadIndex = input<number>(0);
+  initialLoadIndex = input<number>(1);
 }
