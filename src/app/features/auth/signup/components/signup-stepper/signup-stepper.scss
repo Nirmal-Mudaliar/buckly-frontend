@@ -1,5 +1,5 @@
-:host {
-  .p-stepper {
+:host ::ng-deep {
+  &.stepper-container {
     .p-stepitem {
       .p-steppanel {
         background: transparent;
@@ -8,6 +8,12 @@
           font-size: 11px;
           color: var(--buckly-ink-ghost);
           height: 40px;
+        }
+      }
+
+      .p-step-active {
+        .p-step-number {
+          background: var(--buckly-orange);
         }
       }
     }
