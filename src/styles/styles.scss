@@ -286,3 +286,77 @@ body {
   &--completed   { background: var(--status-done-bg);    color: var(--status-done-text);    }
   &--abandoned   { background: var(--status-aband-bg);   color: var(--status-aband-text);   }
 }
+
+// ── 6. Typography utilities ───────────────────────────────────
+// px is used here intentionally — these are dev-time layout helpers,
+// and the body is already fixed at 14px so rem gives no extra benefit.
+//
+// Rule of thumb:
+//   px  → utility classes, borders, shadows, icon sizes (fixed, predictable)
+//   rem → keep in PrimeNG overrides (section 3) so the theme token
+//         system stays internally consistent
+//
+// Do NOT add !important here — these are additive helpers, not overrides.
+
+// — Heading presets —
+// Bundles size + weight + line-height + ink colour in one class.
+.heading-2xl { font-size: 32px; font-weight: 700; line-height: 1.2;  color: var(--buckly-ink); }
+.heading-xl  { font-size: 28px; font-weight: 700; line-height: 1.25; color: var(--buckly-ink); }
+.heading-lg  { font-size: 24px; font-weight: 600; line-height: 1.3;  color: var(--buckly-ink); }
+.heading-md  { font-size: 20px; font-weight: 600; line-height: 1.35; color: var(--buckly-ink); }
+.heading-sm  { font-size: 18px; font-weight: 600; line-height: 1.4;  color: var(--buckly-ink); }
+.heading-xs  { font-size: 16px; font-weight: 600; line-height: 1.4;  color: var(--buckly-ink); }
+
+// — Body / label presets —
+.text-body-lg  { font-size: 16px; font-weight: 400; line-height: 1.5; }
+.text-body     { font-size: 14px; font-weight: 400; line-height: 1.5; } // matches body default
+.text-body-sm  { font-size: 13px; font-weight: 400; line-height: 1.5; }
+.text-caption  { font-size: 12px; font-weight: 400; line-height: 1.4; }
+.text-overline { font-size: 11px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; }
+
+// — Font size only —
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-13 { font-size: 13px; }
+.fs-14 { font-size: 14px; }
+.fs-16 { font-size: 16px; }
+.fs-18 { font-size: 18px; }
+.fs-20 { font-size: 20px; }
+.fs-24 { font-size: 24px; }
+.fs-28 { font-size: 28px; }
+.fs-32 { font-size: 32px; }
+
+// — Font weight only —
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+// — Line height only —
+.lh-tight   { line-height: 1.25;  }
+.lh-snug    { line-height: 1.375; }
+.lh-normal  { line-height: 1.5;   }
+.lh-relaxed { line-height: 1.625; }
+.lh-loose   { line-height: 2;     }
+
+// — Text colour only —
+.color-ink       { color: var(--buckly-ink);       }
+.color-ink-soft  { color: var(--buckly-ink-soft);  }
+.color-muted     { color: var(--buckly-ink-muted); }
+.color-ghost     { color: var(--buckly-ink-ghost); }
+.color-orange    { color: var(--buckly-orange);    }
+.color-success   { color: #166534; }
+.color-warn      { color: #C2410C; }
+.color-danger    { color: #991B1B; }
+.color-info      { color: #3730A3; }
+.color-white     { color: #ffffff; }
+
+// — Text alignment —
+.text-left   { text-align: left;   }
+.text-center { text-align: center; }
+.text-right  { text-align: right;  }
+
+// — Text transform —
+.text-uppercase  { text-transform: uppercase;  }
+.text-capitalize { text-transform: capitalize; }
+.text-truncate   { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
