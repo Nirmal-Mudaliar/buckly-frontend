@@ -1,18 +1,21 @@
-<div class="left-bar-container">
-  <div class="logo-container">
-    <div class="logo">
-      <span>buckl</span><span class="orange-accent">y</span>
+<div class="card-container">
+  <div class="left-bar-container">
+    <div class="logo-container">
+      <div class="logo">
+        <span>buckl</span><span class="orange-accent">y</span>
+      </div>
+      <div class="sub-header">your adventure companion</div>
     </div>
-    <div class="sub-header">your adventure companion</div>
+    <div class="steps-container">
+      <app-signup-stepper></app-signup-stepper>
+    </div>
+    <div class="footer-container">
+      Already have an account? 
+      <span>Log in</span>
+    </div>
   </div>
-  <div class="steps-container">
-    <app-signup-stepper></app-signup-stepper>
-  </div>
-  <div class="footer-container">
-    Already have an account? 
-    <span>Log in</span>
+  <div class="right-bar-container">
+    <router-outlet/>
   </div>
 </div>
-<div class="right-bar-container">
-  <router-outlet/>
-</div>
+

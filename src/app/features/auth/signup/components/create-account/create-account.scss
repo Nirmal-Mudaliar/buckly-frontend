@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  width: 100%;
+  .create-account-container {
+    display: flex;
+
+    .label {
+      display: flex;
+      
+    }
+  }
+}
